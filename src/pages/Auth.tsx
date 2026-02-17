@@ -15,6 +15,7 @@ export default function Auth() {
   const [fullName, setFullName] = useState("");
   const [loading, setLoading] = useState(false);
   const { signIn, signUp } = useAuth();
+  const { signInWithMagicLink } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
 
@@ -68,10 +69,28 @@ export default function Auth() {
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6} />
             </div>
-            <Button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary" disabled={loading}>
+              <Button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary" disabled={loading}>
               {loading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
               {isLogin ? "Sign In" : "Create Account"}
             </Button>
+              {isLogin && (
+                <div className="mt-2">
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    className="w-full"
+                    onClick={async () => {
+                      setLoading(true);
+                      const { error } = await signInWithMagicLink(email);
+                      setLoading(false);
+                      if (error) toast({ title: "Error", description: error.message, variant: "destructive" });
+                      else toast({ title: "Magic link sent", description: `Check ${email} for a sign-in link.` });
+                    }}
+                  >
+                    Send Magic Link
+                  </Button>
+                </div>
+              )}
           </form>
           <div className="mt-4 text-center text-sm">
             <button type="button" onClick={() => setIsLogin(!isLogin)} className="text-primary hover:underline">

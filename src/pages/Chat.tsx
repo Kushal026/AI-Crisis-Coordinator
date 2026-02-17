@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Send, Bot, User, Loader2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -21,6 +22,18 @@ export default function Chat() {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [chatHistory, isTyping]);
+
+  const location = useLocation();
+  useEffect(() => {
+    // Accept prefilled message passed via navigate state (from VoiceAssistant)
+    if ((location as any).state && (location as any).state.prefill) {
+      setInput((location as any).state.prefill);
+      // clear state so repeated navigations don't overwrite
+      try {
+        (window.history.replaceState as any)({ ...window.history.state, usr: undefined }, "");
+      } catch (e) {}
+    }
+  }, [location]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
