@@ -1,0 +1,1031 @@
+=========================================================
+Compiling Corporate Crisis Resource Allocation System...
+=========================================================
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:3541:51: error: 'value' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr T value{};
+                                                   ^
+src/managers/../models/../../include/json.hpp:4407:37: error: 'string_view' is not a member of 'std'
+     || std::is_convertible<KeyType, std::string_view>::value
+                                     ^~~
+src/managers/../models/../../include/json.hpp:4407:53: error: template argument 2 is invalid
+     || std::is_convertible<KeyType, std::string_view>::value
+                                                     ^
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:5711:44: error: 'nlohmann::json_abi_v3_12_0::from_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& from_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~~~
+src/managers/../models/../../include/json.hpp:6482:44: error: 'nlohmann::json_abi_v3_12_0::to_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& to_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:13170:83: error: 'npos' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr std::size_t npos = detail::unknown_size();
+                                                                                   ^
+In file included from src/server/HttpServer.h:4:0,
+                 from src/main.cpp:8:
+src/server/../../include/httplib.h:1496:30: error: 'std::thread' has not been declared
+   void move_to_finished(std::thread::id id);
+                              ^~~~~~
+src/server/../../include/httplib.h:1496:41: error: expected ',' or '...' before 'id'
+   void move_to_finished(std::thread::id id);
+                                         ^~
+src/server/../../include/httplib.h:1507:15: error: 'thread' is not a member of 'std'
+   std::vector<std::thread> threads_;       // base threads
+               ^~~
+src/server/../../include/httplib.h:1507:26: error: template argument 1 is invalid
+   std::vector<std::thread> threads_;       // base threads
+                          ^
+src/server/../../include/httplib.h:1507:26: error: template argument 2 is invalid
+src/server/../../include/httplib.h:1508:13: error: 'thread' is not a member of 'std'
+   std::list<std::thread> dynamic_threads_; // dynamic threads
+             ^~~
+src/server/../../include/httplib.h:1508:24: error: template argument 1 is invalid
+   std::list<std::thread> dynamic_threads_; // dynamic threads
+                        ^
+src/server/../../include/httplib.h:1508:24: error: template argument 2 is invalid
+src/server/../../include/httplib.h:1509:15: error: 'thread' is not a member of 'std'
+   std::vector<std::thread>
+               ^~~
+src/server/../../include/httplib.h:1509:26: error: template argument 1 is invalid
+   std::vector<std::thread>
+                          ^
+src/server/../../include/httplib.h:1509:26: error: template argument 2 is invalid
+src/server/../../include/httplib.h:1512:8: error: 'condition_variable' in namespace 'std' does not name a type
+   std::condition_variable cond_;
+        ^~~~~~~~~~~~~~~~~~
+src/server/../../include/httplib.h:1513:8: error: 'mutex' in namespace 'std' does not name a type
+   std::mutex mutex_;
+        ^~~~~
+src/server/../../include/httplib.h:1887:16: error: 'mutex' in namespace 'std' does not name a type
+   mutable std::mutex logger_mutex_;
+                ^~~~~
+src/server/../../include/httplib.h:2325:16: error: 'mutex' in namespace 'std' does not name a type
+   mutable std::mutex socket_mutex_;
+                ^~~~~
+src/server/../../include/httplib.h:2326:8: error: 'recursive_mutex' in namespace 'std' does not name a type
+   std::recursive_mutex request_mutex_;
+        ^~~~~~~~~~~~~~~
+src/server/../../include/httplib.h:2330:8: error: 'thread' in namespace 'std' does not name a type
+   std::thread::id socket_requests_are_from_thread_ = std::thread::id();
+        ^~~~~~
+src/server/../../include/httplib.h:2389:16: error: 'mutex' in namespace 'std' does not name a type
+   mutable std::mutex logger_mutex_;
+                ^~~~~
+src/server/../../include/httplib.h:3711:16: error: 'mutex' in namespace 'std' does not name a type
+   mutable std::mutex headers_mutex_;
+                ^~~~~
+src/server/../../include/httplib.h:3729:8: error: 'thread' in namespace 'std' does not name a type
+   std::thread async_thread_;
+        ^~~~~~
+src/server/../../include/httplib.h:3810:8: error: 'mutex' in namespace 'std' does not name a type
+   std::mutex write_mutex_;
+        ^~~~~
+src/server/../../include/httplib.h:3811:8: error: 'thread' in namespace 'std' does not name a type
+   std::thread ping_thread_;
+        ^~~~~~
+src/server/../../include/httplib.h:3812:8: error: 'mutex' in namespace 'std' does not name a type
+   std::mutex ping_mutex_;
+        ^~~~~
+src/server/../../include/httplib.h:3813:8: error: 'condition_variable' in namespace 'std' does not name a type
+   std::condition_variable ping_cv_;
+        ^~~~~~~~~~~~~~~~~~
+src/server/../../include/httplib.h: In member function 'httplib::sse::SSEClient& httplib::sse::SSEClient::set_headers(const Headers&)':
+src/server/../../include/httplib.h:4042:19: error: 'mutex' is not a member of 'std'
+   std::lock_guard<std::mutex> lock(headers_mutex_);
+                   ^~~
+src/server/../../include/httplib.h:4042:29: error: template argument 1 is invalid
+   std::lock_guard<std::mutex> lock(headers_mutex_);
+                             ^
+src/server/../../include/httplib.h:4042:36: error: 'headers_mutex_' was not declared in this scope
+   std::lock_guard<std::mutex> lock(headers_mutex_);
+                                    ^~~~~~~~~~~~~~
+src/server/../../include/httplib.h: In member function 'void httplib::sse::SSEClient::start_async()':
+src/server/../../include/httplib.h:4060:3: error: 'async_thread_' was not declared in this scope
+   async_thread_ = std::thread([this]() { run_event_loop(); });
+   ^~~~~~~~~~~~~
+src/server/../../include/httplib.h:4060:19: error: 'thread' is not a member of 'std'
+   async_thread_ = std::thread([this]() { run_event_loop(); });
+                   ^~~
+src/server/../../include/httplib.h: In member function 'void httplib::sse::SSEClient::stop()':
+src/server/../../include/httplib.h:4066:7: error: 'async_thread_' was not declared in this scope
+   if (async_thread_.joinable()) { async_thread_.join(); }
+       ^~~~~~~~~~~~~
+src/server/../../include/httplib.h: In member function 'void httplib::sse::SSEClient::run_event_loop()':
+src/server/../../include/httplib.h:4127:23: error: 'mutex' is not a member of 'std'
+       std::lock_guard<std::mutex> lock(headers_mutex_);
+                       ^~~
+src/server/../../include/httplib.h:4127:33: error: template argument 1 is invalid
+       std::lock_guard<std::mutex> lock(headers_mutex_);
+                                 ^
+src/server/../../include/httplib.h:4127:40: error: 'headers_mutex_' was not declared in this scope
+       std::lock_guard<std::mutex> lock(headers_mutex_);
+                                        ^~~~~~~~~~~~~~
+src/server/../../include/httplib.h: In member function 'void httplib::sse::SSEClient::wait_for_reconnect()':
+src/server/../../include/httplib.h:4247:10: error: 'std::this_thread' has not been declared
+     std::this_thread::sleep_for(std::chrono::milliseconds(100));
+          ^~~~~~~~~~~
+src/server/../../include/httplib.h: In function 'std::__cxx11::string httplib::detail::file_mtime_to_http_date(time_t)':
+src/server/../../include/httplib.h:4444:31: error: 'gmtime_s' was not declared in this scope
+   if (gmtime_s(&tm_buf, &mtime) != 0) { return std::string(); }
+                               ^
+src/server/../../include/httplib.h: In function 'time_t httplib::detail::parse_http_date(const string&)':
+src/server/../../include/httplib.h:4486:27: error: '_mkgmtime' was not declared in this scope
+   return _mkgmtime(&tm_buf);
+                           ^
+src/server/../../include/httplib.h: In member function 'bool httplib::detail::mmap::open(const char*)':
+src/server/../../include/httplib.h:5365:7: error: '::CreateFile2' has not been declared
+       ::CreateFile2(wpath.c_str(), GENERIC_READ,
+       ^~
+src/server/../../include/httplib.h:5383:7: error: '::CreateFileMappingFromApp' has not been declared
+       ::CreateFileMappingFromApp(hFile_, NULL, PAGE_READONLY, size_, NULL);
+       ^~
+src/server/../../include/httplib.h:5397:11: error: '::MapViewOfFileFromApp' has not been declared
+   addr_ = ::MapViewOfFileFromApp(hMapping_, FILE_MAP_READ, 0, 0);
+           ^~
+src/server/../../include/httplib.h: In function 'ssize_t httplib::detail::handle_EINTR(T)':
+src/server/../../include/httplib.h:5481:12: error: 'std::this_thread' has not been declared
+       std::this_thread::sleep_for(std::chrono::microseconds{1});
+            ^~~~~~~~~~~
+src/server/../../include/httplib.h: In function 'int httplib::detail::poll_wrapper(httplib::detail::pollfd*, nfds_t, int)':
+src/server/../../include/httplib.h:5516:10: error: '::WSAPoll' has not been declared
+   return ::WSAPoll(fds, nfds, timeout);
+          ^~
+src/server/../../include/httplib.h: In function 'ssize_t httplib::detail::select_impl(socket_t, short int, time_t, time_t)':
+src/server/../../include/httplib.h:5524:17: error: aggregate 'httplib::detail::pollfd pfd' has incomplete type and cannot be defined
+   struct pollfd pfd;
+                 ^~~
+src/server/../../include/httplib.h: In function 'ssize_t httplib::detail::select_read(socket_t, time_t, time_t)':
+src/server/../../include/httplib.h:5535:28: error: 'POLLIN' was not declared in this scope
+   return select_impl(sock, POLLIN, sec, usec);
+                            ^~~~~~
+src/server/../../include/httplib.h: In function 'ssize_t httplib::detail::select_write(socket_t, time_t, time_t)':
+src/server/../../include/httplib.h:5539:28: error: 'POLLOUT' was not declared in this scope
+   return select_impl(sock, POLLOUT, sec, usec);
+                            ^~~~~~~
+src/server/../../include/httplib.h: In function 'httplib::Error httplib::detail::wait_until_socket_is_ready(socket_t, time_t, time_t)':
+src/server/../../include/httplib.h:5544:17: error: aggregate 'httplib::detail::pollfd pfd_read' has incomplete type and cannot be defined
+   struct pollfd pfd_read;
+                 ^~~~~~~~
+src/server/../../include/httplib.h:5546:21: error: 'POLLIN' was not declared in this scope
+   pfd_read.events = POLLIN | POLLOUT;
+                     ^~~~~~
+src/server/../../include/httplib.h:5546:30: error: 'POLLOUT' was not declared in this scope
+   pfd_read.events = POLLIN | POLLOUT;
+                              ^~~~~~~
+src/server/../../include/httplib.h: In function 'socket_t httplib::detail::create_socket(const string&, const string&, int, int, int, bool, bool, httplib::SocketOptions, BindOrConnect, time_t)':
+src/server/../../include/httplib.h:6182:42: error: 'IPV6_V6ONLY' was not declared in this scope
+       set_socket_opt(sock, IPPROTO_IPV6, IPV6_V6ONLY, ipv6_v6only ? 1 : 0);
+                                          ^~~~~~~~~~~
+src/server/../../include/httplib.h: In constructor 'httplib::ThreadPool::ThreadPool(size_t, size_t, size_t)':
+src/server/../../include/httplib.h:10098:12: error: request for member 'reserve' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::threads_', which is of non-class type 'int'
+   threads_.reserve(base_thread_count_);
+            ^~~~~~~
+src/server/../../include/httplib.h:10103:16: error: request for member 'emplace_back' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::threads_', which is of non-class type 'int'
+       threads_.emplace_back(std::thread([this]() { worker(false); }));
+                ^~~~~~~~~~~~
+src/server/../../include/httplib.h:10103:29: error: 'thread' is not a member of 'std'
+       threads_.emplace_back(std::thread([this]() { worker(false); }));
+                             ^~~
+src/server/../../include/httplib.h:10112:24: error: 'mutex' is not a member of 'std'
+       std::unique_lock<std::mutex> lock(mutex_);
+                        ^~~
+src/server/../../include/httplib.h:10112:34: error: template argument 1 is invalid
+       std::unique_lock<std::mutex> lock(mutex_);
+                                  ^
+src/server/../../include/httplib.h:10112:41: error: 'mutex_' was not declared in this scope
+       std::unique_lock<std::mutex> lock(mutex_);
+                                         ^~~~~~
+src/server/../../include/httplib.h:10115:5: error: 'cond_' was not declared in this scope
+     cond_.notify_all();
+     ^~~~~
+src/server/../../include/httplib.h:10116:20: error: 'begin' was not declared in this scope
+     for (auto &t : threads_) {
+                    ^~~~~~~~
+src/server/../../include/httplib.h:10116:20: note: suggested alternatives:
+In file included from src/managers/../models/../../include/json.hpp:192:0,
+                 from src/managers/../models/User.h:3,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1206:5: note:   'std::begin'
+     begin(const valarray<_Tp>& __va)
+     ^~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:36:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from src/main.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:89:5: note:   'std::begin'
+     begin(initializer_list<_Tp> __ils) noexcept
+     ^~~~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:89:5: note:   'std::begin'
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:3661:33: note:   'nlohmann::json_abi_v3_12_0::detail2::begin'
+ NLOHMANN_CAN_CALL_STD_FUNC_IMPL(begin);
+                                 ^
+src/managers/../models/../../include/json.hpp:3124:20: note: in definition of macro 'NLOHMANN_CAN_CALL_STD_FUNC_IMPL'
+     std_name##_tag std_name(T&&...);                                              \
+                    ^~~~~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/main.cpp:8:
+src/server/../../include/httplib.h:10116:20: error: 'end' was not declared in this scope
+     for (auto &t : threads_) {
+                    ^~~~~~~~
+src/server/../../include/httplib.h:10116:20: note: suggested alternatives:
+In file included from src/managers/../models/../../include/json.hpp:192:0,
+                 from src/managers/../models/User.h:3,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1226:5: note:   'std::end'
+     end(const valarray<_Tp>& __va)
+     ^~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:36:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from src/main.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:99:5: note:   'std::end'
+     end(initializer_list<_Tp> __ils) noexcept
+     ^~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:99:5: note:   'std::end'
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:3681:33: note:   'nlohmann::json_abi_v3_12_0::detail2::end'
+ NLOHMANN_CAN_CALL_STD_FUNC_IMPL(end);
+                                 ^
+src/managers/../models/../../include/json.hpp:3124:20: note: in definition of macro 'NLOHMANN_CAN_CALL_STD_FUNC_IMPL'
+     std_name##_tag std_name(T&&...);                                              \
+                    ^~~~~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/main.cpp:8:
+src/server/../../include/httplib.h: In member function 'virtual bool httplib::ThreadPool::enqueue(std::function<void()>)':
+src/server/../../include/httplib.h:10126:22: error: 'mutex' is not a member of 'std'
+     std::unique_lock<std::mutex> lock(mutex_);
+                      ^~~
+src/server/../../include/httplib.h:10126:32: error: template argument 1 is invalid
+     std::unique_lock<std::mutex> lock(mutex_);
+                                ^
+src/server/../../include/httplib.h:10126:39: error: 'mutex_' was not declared in this scope
+     std::unique_lock<std::mutex> lock(mutex_);
+                                       ^~~~~~
+src/server/../../include/httplib.h:10135:18: error: request for member 'size' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::threads_', which is of non-class type 'int'
+         threads_.size() + dynamic_threads_.size() < max_thread_count_) {
+                  ^~~~
+src/server/../../include/httplib.h:10135:44: error: request for member 'size' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::dynamic_threads_', which is of non-class type 'int'
+         threads_.size() + dynamic_threads_.size() < max_thread_count_) {
+                                            ^~~~
+src/server/../../include/httplib.h:10137:24: error: request for member 'emplace_back' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::dynamic_threads_', which is of non-class type 'int'
+       dynamic_threads_.emplace_back(std::thread([this]() { worker(true); }));
+                        ^~~~~~~~~~~~
+src/server/../../include/httplib.h:10137:37: error: 'thread' is not a member of 'std'
+       dynamic_threads_.emplace_back(std::thread([this]() { worker(true); }));
+                                     ^~~
+src/server/../../include/httplib.h:10141:3: error: 'cond_' was not declared in this scope
+   cond_.notify_one();
+   ^~~~~
+src/server/../../include/httplib.h: In member function 'virtual void httplib::ThreadPool::shutdown()':
+src/server/../../include/httplib.h:10147:22: error: 'mutex' is not a member of 'std'
+     std::unique_lock<std::mutex> lock(mutex_);
+                      ^~~
+src/server/../../include/httplib.h:10147:32: error: template argument 1 is invalid
+     std::unique_lock<std::mutex> lock(mutex_);
+                                ^
+src/server/../../include/httplib.h:10147:39: error: 'mutex_' was not declared in this scope
+     std::unique_lock<std::mutex> lock(mutex_);
+                                       ^~~~~~
+src/server/../../include/httplib.h:10151:3: error: 'cond_' was not declared in this scope
+   cond_.notify_all();
+   ^~~~~
+src/server/../../include/httplib.h:10153:18: error: 'begin' was not declared in this scope
+   for (auto &t : threads_) {
+                  ^~~~~~~~
+src/server/../../include/httplib.h:10153:18: note: suggested alternatives:
+In file included from src/managers/../models/../../include/json.hpp:192:0,
+                 from src/managers/../models/User.h:3,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1206:5: note:   'std::begin'
+     begin(const valarray<_Tp>& __va)
+     ^~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:36:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from src/main.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:89:5: note:   'std::begin'
+     begin(initializer_list<_Tp> __ils) noexcept
+     ^~~~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:89:5: note:   'std::begin'
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:3661:33: note:   'nlohmann::json_abi_v3_12_0::detail2::begin'
+ NLOHMANN_CAN_CALL_STD_FUNC_IMPL(begin);
+                                 ^
+src/managers/../models/../../include/json.hpp:3124:20: note: in definition of macro 'NLOHMANN_CAN_CALL_STD_FUNC_IMPL'
+     std_name##_tag std_name(T&&...);                                              \
+                    ^~~~~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/main.cpp:8:
+src/server/../../include/httplib.h:10153:18: error: 'end' was not declared in this scope
+   for (auto &t : threads_) {
+                  ^~~~~~~~
+src/server/../../include/httplib.h:10153:18: note: suggested alternatives:
+In file included from src/managers/../models/../../include/json.hpp:192:0,
+                 from src/managers/../models/User.h:3,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1226:5: note:   'std::end'
+     end(const valarray<_Tp>& __va)
+     ^~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:36:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from src/main.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:99:5: note:   'std::end'
+     end(initializer_list<_Tp> __ils) noexcept
+     ^~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:99:5: note:   'std::end'
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:3681:33: note:   'nlohmann::json_abi_v3_12_0::detail2::end'
+ NLOHMANN_CAN_CALL_STD_FUNC_IMPL(end);
+                                 ^
+src/managers/../models/../../include/json.hpp:3124:20: note: in definition of macro 'NLOHMANN_CAN_CALL_STD_FUNC_IMPL'
+     std_name##_tag std_name(T&&...);                                              \
+                    ^~~~~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/main.cpp:8:
+src/server/../../include/httplib.h:10159:13: error: 'thread' is not a member of 'std'
+   std::list<std::thread> remaining_dynamic;
+             ^~~
+src/server/../../include/httplib.h:10159:24: error: template argument 1 is invalid
+   std::list<std::thread> remaining_dynamic;
+                        ^
+src/server/../../include/httplib.h:10159:24: error: template argument 2 is invalid
+src/server/../../include/httplib.h:10161:22: error: 'mutex' is not a member of 'std'
+     std::unique_lock<std::mutex> lock(mutex_);
+                      ^~~
+src/server/../../include/httplib.h:10161:32: error: template argument 1 is invalid
+     std::unique_lock<std::mutex> lock(mutex_);
+                                ^
+src/server/../../include/httplib.h:10161:39: error: 'mutex_' was not declared in this scope
+     std::unique_lock<std::mutex> lock(mutex_);
+                                       ^~~~~~
+src/server/../../include/httplib.h:10164:18: error: 'begin' was not declared in this scope
+   for (auto &t : remaining_dynamic) {
+                  ^~~~~~~~~~~~~~~~~
+src/server/../../include/httplib.h:10164:18: note: suggested alternatives:
+In file included from src/managers/../models/../../include/json.hpp:192:0,
+                 from src/managers/../models/User.h:3,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1206:5: note:   'std::begin'
+     begin(const valarray<_Tp>& __va)
+     ^~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:36:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from src/main.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:89:5: note:   'std::begin'
+     begin(initializer_list<_Tp> __ils) noexcept
+     ^~~~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:89:5: note:   'std::begin'
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:3661:33: note:   'nlohmann::json_abi_v3_12_0::detail2::begin'
+ NLOHMANN_CAN_CALL_STD_FUNC_IMPL(begin);
+                                 ^
+src/managers/../models/../../include/json.hpp:3124:20: note: in definition of macro 'NLOHMANN_CAN_CALL_STD_FUNC_IMPL'
+     std_name##_tag std_name(T&&...);                                              \
+                    ^~~~~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/main.cpp:8:
+src/server/../../include/httplib.h:10164:18: error: 'end' was not declared in this scope
+   for (auto &t : remaining_dynamic) {
+                  ^~~~~~~~~~~~~~~~~
+src/server/../../include/httplib.h:10164:18: note: suggested alternatives:
+In file included from src/managers/../models/../../include/json.hpp:192:0,
+                 from src/managers/../models/User.h:3,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1226:5: note:   'std::end'
+     end(const valarray<_Tp>& __va)
+     ^~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:36:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from src/main.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:99:5: note:   'std::end'
+     end(initializer_list<_Tp> __ils) noexcept
+     ^~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\initializer_list:99:5: note:   'std::end'
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/main.cpp:3:
+src/managers/../models/../../include/json.hpp:3681:33: note:   'nlohmann::json_abi_v3_12_0::detail2::end'
+ NLOHMANN_CAN_CALL_STD_FUNC_IMPL(end);
+                                 ^
+src/managers/../models/../../include/json.hpp:3124:20: note: in definition of macro 'NLOHMANN_CAN_CALL_STD_FUNC_IMPL'
+     std_name##_tag std_name(T&&...);                                              \
+                    ^~~~~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/main.cpp:8:
+src/server/../../include/httplib.h:10168:20: error: 'mutex' is not a member of 'std'
+   std::unique_lock<std::mutex> lock(mutex_);
+                    ^~~
+src/server/../../include/httplib.h:10168:30: error: template argument 1 is invalid
+   std::unique_lock<std::mutex> lock(mutex_);
+                              ^
+src/server/../../include/httplib.h:10168:37: error: 'mutex_' was not declared in this scope
+   std::unique_lock<std::mutex> lock(mutex_);
+                                     ^~~~~~
+src/server/../../include/httplib.h: At global scope:
+src/server/../../include/httplib.h:10172:47: error: variable or field 'move_to_finished' declared void
+ inline void ThreadPool::move_to_finished(std::thread::id id) {
+                                               ^~~~~~
+src/server/../../include/httplib.h:10172:47: error: 'std::thread' has not been declared
+src/main.cpp:50:1: error: expected '}' at end of input
+ }
+ ^
+In file included from src/server/HttpServer.h:4:0,
+                 from src/main.cpp:8:
+src/server/../../include/httplib.h: In instantiation of 'ssize_t httplib::detail::handle_EINTR(T) [with T = httplib::detail::select_impl(socket_t, short int, time_t, time_t)::<lambda()>; ssize_t = int]':
+src/server/../../include/httplib.h:5531:71:   required from here
+src/server/../../include/httplib.h:5479:9: error: void value not ignored as it ought to be
+     res = fn();
+     ~~~~^~~~~~
+src/server/../../include/httplib.h: In instantiation of 'ssize_t httplib::detail::handle_EINTR(T) [with T = httplib::detail::wait_until_socket_is_ready(socket_t, time_t, time_t)::<lambda()>; ssize_t = int]':
+src/server/../../include/httplib.h:5552:73:   required from here
+src/server/../../include/httplib.h:5479:9: error: void value not ignored as it ought to be
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/managers/AuthenticationManager.cpp:1:
+src/managers/../models/../../include/json.hpp:3541:51: error: 'value' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr T value{};
+                                                   ^
+src/managers/../models/../../include/json.hpp:4407:37: error: 'string_view' is not a member of 'std'
+     || std::is_convertible<KeyType, std::string_view>::value
+                                     ^~~
+src/managers/../models/../../include/json.hpp:4407:53: error: template argument 2 is invalid
+     || std::is_convertible<KeyType, std::string_view>::value
+                                                     ^
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/managers/AuthenticationManager.cpp:1:
+src/managers/../models/../../include/json.hpp:5711:44: error: 'nlohmann::json_abi_v3_12_0::from_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& from_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~~~
+src/managers/../models/../../include/json.hpp:6482:44: error: 'nlohmann::json_abi_v3_12_0::to_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& to_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~
+In file included from src/managers/../models/User.h:3:0,
+                 from src/managers/AuthenticationManager.h:4,
+                 from src/managers/AuthenticationManager.cpp:1:
+src/managers/../models/../../include/json.hpp:13170:83: error: 'npos' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr std::size_t npos = detail::unknown_size();
+                                                                                   ^
+In file included from src/managers/../models/ResourceAllocation.h:4:0,
+                 from src/managers/../models/Crisis.h:4,
+                 from src/managers/CrisisManager.h:4,
+                 from src/managers/CrisisManager.cpp:1:
+src/managers/../models/../../include/json.hpp:3541:51: error: 'value' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr T value{};
+                                                   ^
+src/managers/../models/../../include/json.hpp:4407:37: error: 'string_view' is not a member of 'std'
+     || std::is_convertible<KeyType, std::string_view>::value
+                                     ^~~
+src/managers/../models/../../include/json.hpp:4407:53: error: template argument 2 is invalid
+     || std::is_convertible<KeyType, std::string_view>::value
+                                                     ^
+In file included from src/managers/../models/ResourceAllocation.h:4:0,
+                 from src/managers/../models/Crisis.h:4,
+                 from src/managers/CrisisManager.h:4,
+                 from src/managers/CrisisManager.cpp:1:
+src/managers/../models/../../include/json.hpp:5711:44: error: 'nlohmann::json_abi_v3_12_0::from_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& from_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~~~
+src/managers/../models/../../include/json.hpp:6482:44: error: 'nlohmann::json_abi_v3_12_0::to_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& to_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~
+In file included from src/managers/../models/ResourceAllocation.h:4:0,
+                 from src/managers/../models/Crisis.h:4,
+                 from src/managers/CrisisManager.h:4,
+                 from src/managers/CrisisManager.cpp:1:
+src/managers/../models/../../include/json.hpp:13170:83: error: 'npos' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr std::size_t npos = detail::unknown_size();
+                                                                                   ^
+src/managers/CrisisManager.cpp: In member function 'void CrisisManager::saveCrises()':
+src/managers/CrisisManager.cpp:36:14: error: 'std::filesystem' has not been declared
+         std::filesystem::path p(filepath);
+              ^~~~~~~~~~
+src/managers/CrisisManager.cpp:37:13: error: 'p' was not declared in this scope
+         if (p.has_parent_path()) std::filesystem::create_directories(p.parent_path());
+             ^
+src/managers/CrisisManager.cpp:37:39: error: 'std::filesystem' has not been declared
+         if (p.has_parent_path()) std::filesystem::create_directories(p.parent_path());
+                                       ^~~~~~~~~~
+In file included from src/managers/../models/ResourceAllocation.h:4:0,
+                 from src/managers/../models/Project.h:5,
+                 from src/managers/ProjectManager.h:5,
+                 from src/managers/ProjectManager.cpp:1:
+src/managers/../models/../../include/json.hpp:3541:51: error: 'value' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr T value{};
+                                                   ^
+src/managers/../models/../../include/json.hpp:4407:37: error: 'string_view' is not a member of 'std'
+     || std::is_convertible<KeyType, std::string_view>::value
+                                     ^~~
+src/managers/../models/../../include/json.hpp:4407:53: error: template argument 2 is invalid
+     || std::is_convertible<KeyType, std::string_view>::value
+                                                     ^
+In file included from src/managers/../models/ResourceAllocation.h:4:0,
+                 from src/managers/../models/Project.h:5,
+                 from src/managers/ProjectManager.h:5,
+                 from src/managers/ProjectManager.cpp:1:
+src/managers/../models/../../include/json.hpp:5711:44: error: 'nlohmann::json_abi_v3_12_0::from_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& from_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~~~
+src/managers/../models/../../include/json.hpp:6482:44: error: 'nlohmann::json_abi_v3_12_0::to_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& to_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~
+In file included from src/managers/../models/ResourceAllocation.h:4:0,
+                 from src/managers/../models/Project.h:5,
+                 from src/managers/ProjectManager.h:5,
+                 from src/managers/ProjectManager.cpp:1:
+src/managers/../models/../../include/json.hpp:13170:83: error: 'npos' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr std::size_t npos = detail::unknown_size();
+                                                                                   ^
+src/managers/ProjectManager.cpp: In member function 'void ProjectManager::saveProjects()':
+src/managers/ProjectManager.cpp:38:14: error: 'std::filesystem' has not been declared
+         std::filesystem::path p(filepath);
+              ^~~~~~~~~~
+src/managers/ProjectManager.cpp:39:13: error: 'p' was not declared in this scope
+         if (p.has_parent_path()) std::filesystem::create_directories(p.parent_path());
+             ^
+src/managers/ProjectManager.cpp:39:39: error: 'std::filesystem' has not been declared
+         if (p.has_parent_path()) std::filesystem::create_directories(p.parent_path());
+                                       ^~~~~~~~~~
+In file included from src/managers/../models/Resource.h:3:0,
+                 from src/managers/ResourceManager.h:4,
+                 from src/managers/ResourceManager.cpp:1:
+src/managers/../models/../../include/json.hpp:3541:51: error: 'value' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr T value{};
+                                                   ^
+src/managers/../models/../../include/json.hpp:4407:37: error: 'string_view' is not a member of 'std'
+     || std::is_convertible<KeyType, std::string_view>::value
+                                     ^~~
+src/managers/../models/../../include/json.hpp:4407:53: error: template argument 2 is invalid
+     || std::is_convertible<KeyType, std::string_view>::value
+                                                     ^
+In file included from src/managers/../models/Resource.h:3:0,
+                 from src/managers/ResourceManager.h:4,
+                 from src/managers/ResourceManager.cpp:1:
+src/managers/../models/../../include/json.hpp:5711:44: error: 'nlohmann::json_abi_v3_12_0::from_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& from_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~~~
+src/managers/../models/../../include/json.hpp:6482:44: error: 'nlohmann::json_abi_v3_12_0::to_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& to_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~
+In file included from src/managers/../models/Resource.h:3:0,
+                 from src/managers/ResourceManager.h:4,
+                 from src/managers/ResourceManager.cpp:1:
+src/managers/../models/../../include/json.hpp:13170:83: error: 'npos' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr std::size_t npos = detail::unknown_size();
+                                                                                   ^
+src/managers/ResourceManager.cpp: In member function 'void ResourceManager::saveResources()':
+src/managers/ResourceManager.cpp:38:14: error: 'std::filesystem' has not been declared
+         std::filesystem::path p(filepath);
+              ^~~~~~~~~~
+src/managers/ResourceManager.cpp:39:13: error: 'p' was not declared in this scope
+         if (p.has_parent_path()) {
+             ^
+src/managers/ResourceManager.cpp:40:18: error: 'std::filesystem' has not been declared
+             std::filesystem::create_directories(p.parent_path());
+                  ^~~~~~~~~~
+In file included from src/managers/../models/Allocation.h:4:0,
+                 from src/managers/AllocationManager.h:5,
+                 from src/managers/AllocationManager.cpp:1:
+src/managers/../models/../../include/json.hpp:3541:51: error: 'value' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr T value{};
+                                                   ^
+src/managers/../models/../../include/json.hpp:4407:37: error: 'string_view' is not a member of 'std'
+     || std::is_convertible<KeyType, std::string_view>::value
+                                     ^~~
+src/managers/../models/../../include/json.hpp:4407:53: error: template argument 2 is invalid
+     || std::is_convertible<KeyType, std::string_view>::value
+                                                     ^
+In file included from src/managers/../models/Allocation.h:4:0,
+                 from src/managers/AllocationManager.h:5,
+                 from src/managers/AllocationManager.cpp:1:
+src/managers/../models/../../include/json.hpp:5711:44: error: 'nlohmann::json_abi_v3_12_0::from_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& from_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~~~
+src/managers/../models/../../include/json.hpp:6482:44: error: 'nlohmann::json_abi_v3_12_0::to_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& to_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~
+In file included from src/managers/../models/Allocation.h:4:0,
+                 from src/managers/AllocationManager.h:5,
+                 from src/managers/AllocationManager.cpp:1:
+src/managers/../models/../../include/json.hpp:13170:83: error: 'npos' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr std::size_t npos = detail::unknown_size();
+                                                                                   ^
+In file included from src/managers/ReportManager.h:3:0,
+                 from src/managers/ReportManager.cpp:1:
+src/managers/../../include/json.hpp:3541:51: error: 'value' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr T value{};
+                                                   ^
+src/managers/../../include/json.hpp:4407:37: error: 'string_view' is not a member of 'std'
+     || std::is_convertible<KeyType, std::string_view>::value
+                                     ^~~
+src/managers/../../include/json.hpp:4407:53: error: template argument 2 is invalid
+     || std::is_convertible<KeyType, std::string_view>::value
+                                                     ^
+In file included from src/managers/ReportManager.h:3:0,
+                 from src/managers/ReportManager.cpp:1:
+src/managers/../../include/json.hpp:5711:44: error: 'nlohmann::json_abi_v3_12_0::from_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& from_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~~~
+src/managers/../../include/json.hpp:6482:44: error: 'nlohmann::json_abi_v3_12_0::to_json' declared as an 'inline' variable
+ JSON_INLINE_VARIABLE constexpr const auto& to_json = // NOLINT(misc-definitions-in-headers)
+                                            ^~~~~~~
+In file included from src/managers/ReportManager.h:3:0,
+                 from src/managers/ReportManager.cpp:1:
+src/managers/../../include/json.hpp:13170:83: error: 'npos' declared as an 'inline' field
+     static JSON_INLINE_VARIABLE constexpr std::size_t npos = detail::unknown_size();
+                                                                                   ^
+In file included from src/server/HttpServer.h:4:0,
+                 from src/server/HttpServer.cpp:1:
+src/server/../../include/httplib.h:1496:30: error: 'std::thread' has not been declared
+   void move_to_finished(std::thread::id id);
+                              ^~~~~~
+src/server/../../include/httplib.h:1496:41: error: expected ',' or '...' before 'id'
+   void move_to_finished(std::thread::id id);
+                                         ^~
+src/server/../../include/httplib.h:1507:15: error: 'thread' is not a member of 'std'
+   std::vector<std::thread> threads_;       // base threads
+               ^~~
+src/server/../../include/httplib.h:1507:26: error: template argument 1 is invalid
+   std::vector<std::thread> threads_;       // base threads
+                          ^
+src/server/../../include/httplib.h:1507:26: error: template argument 2 is invalid
+src/server/../../include/httplib.h:1508:13: error: 'thread' is not a member of 'std'
+   std::list<std::thread> dynamic_threads_; // dynamic threads
+             ^~~
+src/server/../../include/httplib.h:1508:24: error: template argument 1 is invalid
+   std::list<std::thread> dynamic_threads_; // dynamic threads
+                        ^
+src/server/../../include/httplib.h:1508:24: error: template argument 2 is invalid
+src/server/../../include/httplib.h:1509:15: error: 'thread' is not a member of 'std'
+   std::vector<std::thread>
+               ^~~
+src/server/../../include/httplib.h:1509:26: error: template argument 1 is invalid
+   std::vector<std::thread>
+                          ^
+src/server/../../include/httplib.h:1509:26: error: template argument 2 is invalid
+src/server/../../include/httplib.h:1512:8: error: 'condition_variable' in namespace 'std' does not name a type
+   std::condition_variable cond_;
+        ^~~~~~~~~~~~~~~~~~
+src/server/../../include/httplib.h:1513:8: error: 'mutex' in namespace 'std' does not name a type
+   std::mutex mutex_;
+        ^~~~~
+src/server/../../include/httplib.h:1887:16: error: 'mutex' in namespace 'std' does not name a type
+   mutable std::mutex logger_mutex_;
+                ^~~~~
+src/server/../../include/httplib.h:2325:16: error: 'mutex' in namespace 'std' does not name a type
+   mutable std::mutex socket_mutex_;
+                ^~~~~
+src/server/../../include/httplib.h:2326:8: error: 'recursive_mutex' in namespace 'std' does not name a type
+   std::recursive_mutex request_mutex_;
+        ^~~~~~~~~~~~~~~
+src/server/../../include/httplib.h:2330:8: error: 'thread' in namespace 'std' does not name a type
+   std::thread::id socket_requests_are_from_thread_ = std::thread::id();
+        ^~~~~~
+src/server/../../include/httplib.h:2389:16: error: 'mutex' in namespace 'std' does not name a type
+   mutable std::mutex logger_mutex_;
+                ^~~~~
+src/server/../../include/httplib.h:3711:16: error: 'mutex' in namespace 'std' does not name a type
+   mutable std::mutex headers_mutex_;
+                ^~~~~
+src/server/../../include/httplib.h:3729:8: error: 'thread' in namespace 'std' does not name a type
+   std::thread async_thread_;
+        ^~~~~~
+src/server/../../include/httplib.h:3810:8: error: 'mutex' in namespace 'std' does not name a type
+   std::mutex write_mutex_;
+        ^~~~~
+src/server/../../include/httplib.h:3811:8: error: 'thread' in namespace 'std' does not name a type
+   std::thread ping_thread_;
+        ^~~~~~
+src/server/../../include/httplib.h:3812:8: error: 'mutex' in namespace 'std' does not name a type
+   std::mutex ping_mutex_;
+        ^~~~~
+src/server/../../include/httplib.h:3813:8: error: 'condition_variable' in namespace 'std' does not name a type
+   std::condition_variable ping_cv_;
+        ^~~~~~~~~~~~~~~~~~
+src/server/../../include/httplib.h: In member function 'httplib::sse::SSEClient& httplib::sse::SSEClient::set_headers(const Headers&)':
+src/server/../../include/httplib.h:4042:19: error: 'mutex' is not a member of 'std'
+   std::lock_guard<std::mutex> lock(headers_mutex_);
+                   ^~~
+src/server/../../include/httplib.h:4042:29: error: template argument 1 is invalid
+   std::lock_guard<std::mutex> lock(headers_mutex_);
+                             ^
+src/server/../../include/httplib.h:4042:36: error: 'headers_mutex_' was not declared in this scope
+   std::lock_guard<std::mutex> lock(headers_mutex_);
+                                    ^~~~~~~~~~~~~~
+src/server/../../include/httplib.h: In member function 'void httplib::sse::SSEClient::start_async()':
+src/server/../../include/httplib.h:4060:3: error: 'async_thread_' was not declared in this scope
+   async_thread_ = std::thread([this]() { run_event_loop(); });
+   ^~~~~~~~~~~~~
+src/server/../../include/httplib.h:4060:19: error: 'thread' is not a member of 'std'
+   async_thread_ = std::thread([this]() { run_event_loop(); });
+                   ^~~
+src/server/../../include/httplib.h: In member function 'void httplib::sse::SSEClient::stop()':
+src/server/../../include/httplib.h:4066:7: error: 'async_thread_' was not declared in this scope
+   if (async_thread_.joinable()) { async_thread_.join(); }
+       ^~~~~~~~~~~~~
+src/server/../../include/httplib.h: In member function 'void httplib::sse::SSEClient::run_event_loop()':
+src/server/../../include/httplib.h:4127:23: error: 'mutex' is not a member of 'std'
+       std::lock_guard<std::mutex> lock(headers_mutex_);
+                       ^~~
+src/server/../../include/httplib.h:4127:33: error: template argument 1 is invalid
+       std::lock_guard<std::mutex> lock(headers_mutex_);
+                                 ^
+src/server/../../include/httplib.h:4127:40: error: 'headers_mutex_' was not declared in this scope
+       std::lock_guard<std::mutex> lock(headers_mutex_);
+                                        ^~~~~~~~~~~~~~
+src/server/../../include/httplib.h: In member function 'void httplib::sse::SSEClient::wait_for_reconnect()':
+src/server/../../include/httplib.h:4247:10: error: 'std::this_thread' has not been declared
+     std::this_thread::sleep_for(std::chrono::milliseconds(100));
+          ^~~~~~~~~~~
+src/server/../../include/httplib.h: In function 'std::__cxx11::string httplib::detail::file_mtime_to_http_date(time_t)':
+src/server/../../include/httplib.h:4444:31: error: 'gmtime_s' was not declared in this scope
+   if (gmtime_s(&tm_buf, &mtime) != 0) { return std::string(); }
+                               ^
+src/server/../../include/httplib.h: In function 'time_t httplib::detail::parse_http_date(const string&)':
+src/server/../../include/httplib.h:4486:27: error: '_mkgmtime' was not declared in this scope
+   return _mkgmtime(&tm_buf);
+                           ^
+src/server/../../include/httplib.h: In member function 'bool httplib::detail::mmap::open(const char*)':
+src/server/../../include/httplib.h:5365:7: error: '::CreateFile2' has not been declared
+       ::CreateFile2(wpath.c_str(), GENERIC_READ,
+       ^~
+src/server/../../include/httplib.h:5383:7: error: '::CreateFileMappingFromApp' has not been declared
+       ::CreateFileMappingFromApp(hFile_, NULL, PAGE_READONLY, size_, NULL);
+       ^~
+src/server/../../include/httplib.h:5397:11: error: '::MapViewOfFileFromApp' has not been declared
+   addr_ = ::MapViewOfFileFromApp(hMapping_, FILE_MAP_READ, 0, 0);
+           ^~
+src/server/../../include/httplib.h: In function 'ssize_t httplib::detail::handle_EINTR(T)':
+src/server/../../include/httplib.h:5481:12: error: 'std::this_thread' has not been declared
+       std::this_thread::sleep_for(std::chrono::microseconds{1});
+            ^~~~~~~~~~~
+src/server/../../include/httplib.h: In function 'int httplib::detail::poll_wrapper(httplib::detail::pollfd*, nfds_t, int)':
+src/server/../../include/httplib.h:5516:10: error: '::WSAPoll' has not been declared
+   return ::WSAPoll(fds, nfds, timeout);
+          ^~
+src/server/../../include/httplib.h: In function 'ssize_t httplib::detail::select_impl(socket_t, short int, time_t, time_t)':
+src/server/../../include/httplib.h:5524:17: error: aggregate 'httplib::detail::pollfd pfd' has incomplete type and cannot be defined
+   struct pollfd pfd;
+                 ^~~
+src/server/../../include/httplib.h: In function 'ssize_t httplib::detail::select_read(socket_t, time_t, time_t)':
+src/server/../../include/httplib.h:5535:28: error: 'POLLIN' was not declared in this scope
+   return select_impl(sock, POLLIN, sec, usec);
+                            ^~~~~~
+src/server/../../include/httplib.h: In function 'ssize_t httplib::detail::select_write(socket_t, time_t, time_t)':
+src/server/../../include/httplib.h:5539:28: error: 'POLLOUT' was not declared in this scope
+   return select_impl(sock, POLLOUT, sec, usec);
+                            ^~~~~~~
+src/server/../../include/httplib.h: In function 'httplib::Error httplib::detail::wait_until_socket_is_ready(socket_t, time_t, time_t)':
+src/server/../../include/httplib.h:5544:17: error: aggregate 'httplib::detail::pollfd pfd_read' has incomplete type and cannot be defined
+   struct pollfd pfd_read;
+                 ^~~~~~~~
+src/server/../../include/httplib.h:5546:21: error: 'POLLIN' was not declared in this scope
+   pfd_read.events = POLLIN | POLLOUT;
+                     ^~~~~~
+src/server/../../include/httplib.h:5546:30: error: 'POLLOUT' was not declared in this scope
+   pfd_read.events = POLLIN | POLLOUT;
+                              ^~~~~~~
+src/server/../../include/httplib.h: In function 'socket_t httplib::detail::create_socket(const string&, const string&, int, int, int, bool, bool, httplib::SocketOptions, BindOrConnect, time_t)':
+src/server/../../include/httplib.h:6182:42: error: 'IPV6_V6ONLY' was not declared in this scope
+       set_socket_opt(sock, IPPROTO_IPV6, IPV6_V6ONLY, ipv6_v6only ? 1 : 0);
+                                          ^~~~~~~~~~~
+src/server/../../include/httplib.h: In constructor 'httplib::ThreadPool::ThreadPool(size_t, size_t, size_t)':
+src/server/../../include/httplib.h:10098:12: error: request for member 'reserve' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::threads_', which is of non-class type 'int'
+   threads_.reserve(base_thread_count_);
+            ^~~~~~~
+src/server/../../include/httplib.h:10103:16: error: request for member 'emplace_back' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::threads_', which is of non-class type 'int'
+       threads_.emplace_back(std::thread([this]() { worker(false); }));
+                ^~~~~~~~~~~~
+src/server/../../include/httplib.h:10103:29: error: 'thread' is not a member of 'std'
+       threads_.emplace_back(std::thread([this]() { worker(false); }));
+                             ^~~
+src/server/../../include/httplib.h:10112:24: error: 'mutex' is not a member of 'std'
+       std::unique_lock<std::mutex> lock(mutex_);
+                        ^~~
+src/server/../../include/httplib.h:10112:34: error: template argument 1 is invalid
+       std::unique_lock<std::mutex> lock(mutex_);
+                                  ^
+src/server/../../include/httplib.h:10112:41: error: 'mutex_' was not declared in this scope
+       std::unique_lock<std::mutex> lock(mutex_);
+                                         ^~~~~~
+src/server/../../include/httplib.h:10115:5: error: 'cond_' was not declared in this scope
+     cond_.notify_all();
+     ^~~~~
+src/server/../../include/httplib.h:10116:20: error: 'begin' was not declared in this scope
+     for (auto &t : threads_) {
+                    ^~~~~~~~
+src/server/../../include/httplib.h:10116:20: note: suggested alternative:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from src/server/HttpServer.h:2,
+                 from src/server/HttpServer.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:105:37: note:   'std::begin'
+   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
+                                     ^~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/server/HttpServer.cpp:1:
+src/server/../../include/httplib.h:10116:20: error: 'end' was not declared in this scope
+     for (auto &t : threads_) {
+                    ^~~~~~~~
+src/server/../../include/httplib.h:10116:20: note: suggested alternative:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from src/server/HttpServer.h:2,
+                 from src/server/HttpServer.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:107:37: note:   'std::end'
+   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
+                                     ^~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/server/HttpServer.cpp:1:
+src/server/../../include/httplib.h: In member function 'virtual bool httplib::ThreadPool::enqueue(std::function<void()>)':
+src/server/../../include/httplib.h:10126:22: error: 'mutex' is not a member of 'std'
+     std::unique_lock<std::mutex> lock(mutex_);
+                      ^~~
+src/server/../../include/httplib.h:10126:32: error: template argument 1 is invalid
+     std::unique_lock<std::mutex> lock(mutex_);
+                                ^
+src/server/../../include/httplib.h:10126:39: error: 'mutex_' was not declared in this scope
+     std::unique_lock<std::mutex> lock(mutex_);
+                                       ^~~~~~
+src/server/../../include/httplib.h:10135:18: error: request for member 'size' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::threads_', which is of non-class type 'int'
+         threads_.size() + dynamic_threads_.size() < max_thread_count_) {
+                  ^~~~
+src/server/../../include/httplib.h:10135:44: error: request for member 'size' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::dynamic_threads_', which is of non-class type 'int'
+         threads_.size() + dynamic_threads_.size() < max_thread_count_) {
+                                            ^~~~
+src/server/../../include/httplib.h:10137:24: error: request for member 'emplace_back' in '((httplib::ThreadPool*)this)->httplib::ThreadPool::dynamic_threads_', which is of non-class type 'int'
+       dynamic_threads_.emplace_back(std::thread([this]() { worker(true); }));
+                        ^~~~~~~~~~~~
+src/server/../../include/httplib.h:10137:37: error: 'thread' is not a member of 'std'
+       dynamic_threads_.emplace_back(std::thread([this]() { worker(true); }));
+                                     ^~~
+src/server/../../include/httplib.h:10141:3: error: 'cond_' was not declared in this scope
+   cond_.notify_one();
+   ^~~~~
+src/server/../../include/httplib.h: In member function 'virtual void httplib::ThreadPool::shutdown()':
+src/server/../../include/httplib.h:10147:22: error: 'mutex' is not a member of 'std'
+     std::unique_lock<std::mutex> lock(mutex_);
+                      ^~~
+src/server/../../include/httplib.h:10147:32: error: template argument 1 is invalid
+     std::unique_lock<std::mutex> lock(mutex_);
+                                ^
+src/server/../../include/httplib.h:10147:39: error: 'mutex_' was not declared in this scope
+     std::unique_lock<std::mutex> lock(mutex_);
+                                       ^~~~~~
+src/server/../../include/httplib.h:10151:3: error: 'cond_' was not declared in this scope
+   cond_.notify_all();
+   ^~~~~
+src/server/../../include/httplib.h:10153:18: error: 'begin' was not declared in this scope
+   for (auto &t : threads_) {
+                  ^~~~~~~~
+src/server/../../include/httplib.h:10153:18: note: suggested alternative:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from src/server/HttpServer.h:2,
+                 from src/server/HttpServer.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:105:37: note:   'std::begin'
+   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
+                                     ^~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/server/HttpServer.cpp:1:
+src/server/../../include/httplib.h:10153:18: error: 'end' was not declared in this scope
+   for (auto &t : threads_) {
+                  ^~~~~~~~
+src/server/../../include/httplib.h:10153:18: note: suggested alternative:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from src/server/HttpServer.h:2,
+                 from src/server/HttpServer.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:107:37: note:   'std::end'
+   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
+                                     ^~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/server/HttpServer.cpp:1:
+src/server/../../include/httplib.h:10159:13: error: 'thread' is not a member of 'std'
+   std::list<std::thread> remaining_dynamic;
+             ^~~
+src/server/../../include/httplib.h:10159:24: error: template argument 1 is invalid
+   std::list<std::thread> remaining_dynamic;
+                        ^
+src/server/../../include/httplib.h:10159:24: error: template argument 2 is invalid
+src/server/../../include/httplib.h:10161:22: error: 'mutex' is not a member of 'std'
+     std::unique_lock<std::mutex> lock(mutex_);
+                      ^~~
+src/server/../../include/httplib.h:10161:32: error: template argument 1 is invalid
+     std::unique_lock<std::mutex> lock(mutex_);
+                                ^
+src/server/../../include/httplib.h:10161:39: error: 'mutex_' was not declared in this scope
+     std::unique_lock<std::mutex> lock(mutex_);
+                                       ^~~~~~
+src/server/../../include/httplib.h:10164:18: error: 'begin' was not declared in this scope
+   for (auto &t : remaining_dynamic) {
+                  ^~~~~~~~~~~~~~~~~
+src/server/../../include/httplib.h:10164:18: note: suggested alternative:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from src/server/HttpServer.h:2,
+                 from src/server/HttpServer.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:105:37: note:   'std::begin'
+   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
+                                     ^~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/server/HttpServer.cpp:1:
+src/server/../../include/httplib.h:10164:18: error: 'end' was not declared in this scope
+   for (auto &t : remaining_dynamic) {
+                  ^~~~~~~~~~~~~~~~~
+src/server/../../include/httplib.h:10164:18: note: suggested alternative:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from src/server/HttpServer.h:2,
+                 from src/server/HttpServer.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:107:37: note:   'std::end'
+   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
+                                     ^~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/server/HttpServer.cpp:1:
+src/server/../../include/httplib.h:10168:20: error: 'mutex' is not a member of 'std'
+   std::unique_lock<std::mutex> lock(mutex_);
+                    ^~~
+src/server/../../include/httplib.h:10168:30: error: template argument 1 is invalid
+   std::unique_lock<std::mutex> lock(mutex_);
+                              ^
+src/server/../../include/httplib.h:10168:37: error: 'mutex_' was not declared in this scope
+   std::unique_lock<std::mutex> lock(mutex_);
+                                     ^~~~~~
+src/server/../../include/httplib.h: At global scope:
+src/server/../../include/httplib.h:10172:47: error: variable or field 'move_to_finished' declared void
+ inline void ThreadPool::move_to_finished(std::thread::id id) {
+                                               ^~~~~~
+src/server/../../include/httplib.h:10172:47: error: 'std::thread' has not been declared
+In file included from src/server/../managers/../models/User.h:3:0,
+                 from src/server/../managers/AuthenticationManager.h:4,
+                 from src/server/HttpServer.h:5,
+                 from src/server/HttpServer.cpp:1:
+src/server/../managers/../models/../../include/json.hpp:1102:41: error: expected '}' before end of line
+     #define JSON_HEDLEY_DIAGNOSTIC_PUSH _Pragma("GCC diagnostic push")
+                                         ^
+src/server/../managers/../models/../../include/json.hpp:1605:1: note: in expansion of macro 'JSON_HEDLEY_DIAGNOSTIC_PUSH'
+ JSON_HEDLEY_DIAGNOSTIC_PUSH
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/server/../managers/../models/../../include/json.hpp:1102:41: error: expected declaration before end of line
+     #define JSON_HEDLEY_DIAGNOSTIC_PUSH _Pragma("GCC diagnostic push")
+                                         ^
+src/server/../managers/../models/../../include/json.hpp:1605:1: note: in expansion of macro 'JSON_HEDLEY_DIAGNOSTIC_PUSH'
+ JSON_HEDLEY_DIAGNOSTIC_PUSH
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/server/HttpServer.h:4:0,
+                 from src/server/HttpServer.cpp:1:
+src/server/../../include/httplib.h: In instantiation of 'ssize_t httplib::detail::handle_EINTR(T) [with T = httplib::detail::select_impl(socket_t, short int, time_t, time_t)::<lambda()>; ssize_t = int]':
+src/server/../../include/httplib.h:5531:71:   required from here
+src/server/../../include/httplib.h:5479:9: error: void value not ignored as it ought to be
+     res = fn();
+     ~~~~^~~~~~
+src/server/../../include/httplib.h: In instantiation of 'ssize_t httplib::detail::handle_EINTR(T) [with T = httplib::detail::wait_until_socket_is_ready(socket_t, time_t, time_t)::<lambda()>; ssize_t = int]':
+src/server/../../include/httplib.h:5552:73:   required from here
+src/server/../../include/httplib.h:5479:9: error: void value not ignored as it ought to be
+[ERROR] Compilation failed! Please verify g++ is in your PATH.
