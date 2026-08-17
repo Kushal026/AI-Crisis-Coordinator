@@ -1,0 +1,36 @@
+# Build artifacts
+*.log
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.a
+*.lib
+backend-build.log
+backend-start.log
+
+# Dependencies
+node_modules/
+dist/
+build/
+out/
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Backend
+backend/crisis_server.exe
+backend/data/users.json
