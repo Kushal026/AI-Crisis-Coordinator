@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { Login } from './pages/Login';
+import { LandingPage } from './pages/LandingPage';
 import { Dashboard } from './pages/Dashboard';
 import { CrisisManagement } from './pages/CrisisManagement';
 import { Projects } from './pages/Projects';
@@ -19,6 +20,7 @@ export const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const [currentTab, setCurrentTab] = useState('dashboard');
   const [theme, setTheme] = useState('dark'); // Default to enterprise dark mode!
+  const [showLogin, setShowLogin] = useState(false);
 
   // Sync theme with HTML attribute
   useEffect(() => {
@@ -50,12 +52,17 @@ export const App: React.FC = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     setCurrentTab('dashboard');
+    setShowLogin(false);
   };
 
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(nextTheme);
     localStorage.setItem('theme', nextTheme);
+  };
+
+  const handleAccessPortal = () => {
+    setShowLogin(true);
   };
 
   // Render Page Content based on selected tab
@@ -78,7 +85,10 @@ export const App: React.FC = () => {
   };
 
   if (!user) {
-    return <Login onLoginSuccess={handleLoginSuccess} />;
+    if (showLogin) {
+      return <Login onLoginSuccess={handleLoginSuccess} />;
+    }
+    return <LandingPage onLoginClick={handleAccessPortal} />;
   }
 
   return (
